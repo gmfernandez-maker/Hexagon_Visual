@@ -18,6 +18,22 @@ void defaultDisplay() {
 
     const unsigned char str[] = "FEU-TECH";
 
+
+    void defaultDisplay() {
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    // Draw text
+    glColor3f(0.0f, 0.0f, 1.0f); // blue
+    glRasterPos2f(px, py);
+
+    const char* text = "FEU-TECH";
+    for (int i = 0; text[i] != '\0'; i++) {
+        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+    }
+
+    glFlush();
+}
+
     // Draw text
     glColor3f(0.0f, 0.0f, 1.0f); // blue
     glRasterPos2f(px, py);
