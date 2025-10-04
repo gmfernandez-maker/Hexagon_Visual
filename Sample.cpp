@@ -16,12 +16,6 @@ float px = 0.0f, py = 0.0f;
 void defaultDisplay() {
     glClear(GL_COLOR_BUFFER_BIT);
 
-    const unsigned char str[] = "FEU-TECH";
-
-
-    void defaultDisplay() {
-    glClear(GL_COLOR_BUFFER_BIT);
-
     // Draw text
     glColor3f(0.0f, 0.0f, 1.0f); // blue
     glRasterPos2f(px, py);
@@ -32,6 +26,7 @@ void defaultDisplay() {
     }
 
     glFlush();
+}
 
 // --- Keyboard monitor ---
 void keyboardMonitor(unsigned char key, int x, int y) {
@@ -78,9 +73,9 @@ void detectPassiveMotion(int x, int y) {
 
 // --- Mouse entry (inside/outside window) ---
 void mouseEntryDetector(int state) {
-    if (state == GLUT_LEFT) {   // probably you meant GLUT_LEFT? 
+    if (state == GLUT_LEFT) {
         cout << "Mouse has left the application" << endl;
-    } else {
+    } else if (state == GLUT_ENTERED) {
         cout << "Mouse has re-entered the application" << endl;
     }
 }
