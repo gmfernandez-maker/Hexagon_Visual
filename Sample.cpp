@@ -32,15 +32,6 @@ void defaultDisplay() {
     }
 
     glFlush();
-}
-
-    // Draw text
-    glColor3f(0.0f, 0.0f, 1.0f); // blue
-    glRasterPos2f(px, py);
-    glutBitmapString(GLUT_BITMAP_HELVETICA_18, str);
-
-    glFlush();
-}
 
 // --- Keyboard monitor ---
 void keyboardMonitor(unsigned char key, int x, int y) {
